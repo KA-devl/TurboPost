@@ -1,11 +1,14 @@
-# TurboPost
-UI web application of TurbPost (SOEN 343 Project)
 <p align="center">
   <a href="https://github.com/KA-devl/TurboPost/">
     <h1 align="center">TurboPost</h1>
   </a>
 </p>
+ <img alt="" src="https://github.com/KA-devl/TurboPost/blob/main/TURBO%20DELIVERY.png">
 
+
+# Project Information 🚀
+
+**Delivery System Software  🔥**
 <p align="center">
   <a aria-label="Github Actions" href="">
     <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white">
@@ -23,9 +26,6 @@ UI web application of TurbPost (SOEN 343 Project)
     <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white">
 
   </a>
-  <a aria-label="MUI" href="https://mui.com/">
-    <img alt="" src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white">
-  </a>
   <a aria-label="GitKraken" href="https://www.gitkraken.com/">
     <img alt="" src="https://img.shields.io/badge/GitKraken-179287?style=for-the-badge&logo=GitKraken&logoColor=white">
   </a>
@@ -37,20 +37,17 @@ UI web application of TurbPost (SOEN 343 Project)
   </a>
     </a>
    <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white">
+   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white">
+
 
 </p>
-
-# Project Information 🚀
-
-**Delivery System Software  🔥**
 
 ## Running & Building the project 🔨
 - Add your firebase configuration in src/config/firebase_config.ts
 
 ```
 npm install
-npm run build
-npm run start
+npm run dev
 ```
 
 
