@@ -1,5 +1,8 @@
 <template>
-    <form @submit.prevent="login" class="h-screen w-screen py-16 px-4 parent">
+
+
+    <form @submit.prevent="login" class="h-screen w-screen  px-4  parent">
+      <Navbar />
       <div class="flex flex-col items-center justify-center ">
   
         <div class="bg-white shadow rounded lg:w-1/3  md:w-1/2 w-full p-10 mt-8">
@@ -53,6 +56,7 @@
         </div>
       </div>
     </form>
+    <Footer/>
   </template>
   
   <script>
@@ -60,9 +64,11 @@
   import { supabase } from "../supabase/init";
   import { useRouter } from "vue-router";
   import { useToast } from "vue-toastification";
+  import Navbar from "../components/Navbar.vue";
+  import Footer from "../components/Footer.vue";
 
   export default {
-    components: {  },
+    components: { Navbar, Footer },
     setup() {
   
       const toast = useToast();

@@ -23,7 +23,7 @@ const routes = [
     component: Dashboard,
     meta: {
       title: "Dashboard",
-      auth: false
+      auth: true
     }
   },
   {
