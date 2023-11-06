@@ -1,18 +1,13 @@
 <template>
-<PackageSentConfirmation></PackageSentConfirmation>
+ <router-view />
 </template>
 
-<script lang="ts">
-import PackageSentConfirmation from './components/PackageSentConfirmation.vue';
-export default {
-  components : {PackageSentConfirmation},
-  setup() {
+<script >
 
-  }
-}
+
 
 </script>
 
-<style lang="scss">
+<style>
 
 </style>
