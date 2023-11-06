@@ -11,7 +11,7 @@
       </h1>
 
       <p class="mt-3 text-gray-600 dark:text-gray-400">
-        SYou have sent or expect to receive a package? You can always track it here.
+        You have sent or expect to receive a package? You can always track it here.
       </p>
 
       <div class="mt-7 sm:mt-12 mx-auto max-w-xl relative">
