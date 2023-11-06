@@ -1,64 +1,12 @@
 <template>
-<div class="flex h-screen w-screen items-center bg-blue-50 text-gray-700">
-  <div class="mx-auto flex max-w-lg flex-col rounded-lg bg-white px-4 pb-4 shadow-lg sm:rounded-3xl sm:px-14 sm:pb-10">
-    <h1 class="mt-4 text-center text-lg font-medium">Create your own plan</h1>
-    <hr class="mt-4" />
-
-    <span class="mt-6 text-center font-serif text-3xl font-bold text-blue-900 sm:mt-12 sm:text-5xl">$89<span class="text-sm">/month</span> </span>
-
-    <span class="mt-6 font-medium sm:mt-12 sm:text-lg">API Calls</span>
-    <div class="flex items-center">
-      <input class="accent-blue-900 mr-2 h-2 w-full appearance-none rounded-full bg-blue-100" value="75" type="range" name="" id="" />
-      <span class="font-medium">150k</span>
-    </div>
-    <span class="mt-4 font-medium sm:text-lg">Database Writes</span>
-    <div class="flex items-center">
-      <input class="accent-blue-900 mr-2 h-2 w-full appearance-none rounded-full bg-blue-100" value="50" type="range" name="" id="" />
-      <span class="font-medium">250k</span>
-    </div>
-
-    <span class="mt-4 font-medium sm:text-lg">CPU Credits</span>
-    <div class="flex flex-wrap gap-2">
-      <button class="active:scale-95 rounded-lg bg-blue-100 px-4 py-2 font-medium text-blue-900">40</button>
-      <button class="active:scale-95 rounded-lg bg-blue-100 px-4 py-2 font-medium text-blue-900">200</button>
-      <button class="active:scale-95 rounded-lg bg-blue-900 px-4 py-2 font-medium text-white">400</button>
-      <button class="active:scale-95 rounded-lg bg-blue-100 px-4 py-2 font-medium text-blue-900">800</button>
-      <button class="active:scale-95 rounded-lg bg-blue-100 px-4 py-2 font-medium text-blue-900">1200</button>
-    </div>
-
-    <span class="mt-4 font-medium sm:text-lg">Server</span>
-    <div class="flex flex-wrap gap-2">
-      <button class="active:scale-95 rounded-lg bg-blue-900 px-4 py-2 font-medium text-white">Windows</button>
-      <button class="active:scale-95 rounded-lg bg-blue-100 px-4 py-2 font-medium text-blue-900">Linux</button>
-    </div>
-    <hr class="mt-8" />
-
-    <button class="mx-auto mt-4 block h-12 rounded-full bg-blue-600 px-6 font-medium tracking-wide text-white shadow-md outline-none transition duration-200 sm:mt-10 focus:ring hover:bg-blue-500">Get Started</button>
-  </div>
-</div>
-
-<!------>
 
 
 
 
-<div class="flex h-screen bg-gray-100">
-   <div class="m-auto">
-      <div>
-         <button type="button" class="relative w-full flex justify-center items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize   bg-black rounded-md hover:bg-gray-900  focus:outline-none   transition duration-300 transform active:scale-95 ease-in-out">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF">
-               <g>
-                  <rect fill="none" height="24" width="24"></rect>
-               </g>
-               <g>
-                  <g>
-                     <path d="M19,13h-6v6h-2v-6H5v-2h6V5h2v6h6V13z"></path>
-                  </g>
-               </g>
-            </svg>
-            <span class="pl-2 mx-1">Create new shipping label</span>
-         </button>
-         <div class="mt-5 bg-white rounded-lg shadow">
+<div class="flex h-screen ml-16 mt-8">
+
+      <div class="w-full">
+         <div class="mt-5 bg-white w-full rounded-lg shadow">
             <div class="flex">
                <div class="flex-1 py-5 pl-5 overflow-hidden">
                   <svg class="inline align-text-top" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" fill="#000000">
@@ -77,7 +25,7 @@
                   <div class="flex-grow w-1/4 pr-2"><input  placeholder="PLZ" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
                   <div class="flex-grow"><input placeholder="City" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
                </div>
-               <div class="flex items-center pt-3"><input type="checkbox" class="w-4 h-4 text-black bg-gray-300 border-none rounded-md focus:ring-transparent"><label for="safeAdress" class="block ml-2 text-sm text-gray-900">Save as default address</label></div>
+               <div class="flex items-center pt-3"><input type="checkbox" class="w-4 h-4 text-black bg-blue-500 border-none rounded-md focus:ring-transparent"><label for="safeAdress" class="block ml-2 text-sm text-gray-900">Save as default address</label></div>
             </div>
             <div class="flex">
                <div class="flex-1 py-5 pl-5 overflow-hidden">
@@ -103,7 +51,7 @@
             <hr class="mt-4">
             <div class="flex flex-row-reverse p-3">
                <div class="flex-initial pl-3">
-                  <button type="button" class="flex items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize   bg-black rounded-md hover:bg-gray-800  focus:outline-none focus:bg-gray-900  transition duration-300 transform active:scale-95 ease-in-out">
+                  <button type="button" class="flex items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize   bg-blue-500 rounded-md hover:bg-gray-800  focus:outline-none focus:bg-gray-900  transition duration-300 transform active:scale-95 ease-in-out">
                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF">
                         <path d="M0 0h24v24H0V0z" fill="none"></path>
                         <path d="M5 5v14h14V7.83L16.17 5H5zm7 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-8H6V6h9v4z" opacity=".3"></path>
@@ -124,37 +72,34 @@
                </div>
             </div>
          </div>
-         <div class="mt-5 bg-white shadow cursor-pointer rounded-xl">
-            <div class="flex">
-               <div class="flex-1 py-5 pl-5 overflow-hidden">
-                  <ul>
-                     <li class="text-xs text-gray-600 uppercase ">Receiver</li>
-                     <li>Max Mustermann</li>
-                     <li>Musterstrasse 1</li>
-                     <li>4020 Linz</li>
-                  </ul>
-               </div>
-               <div class="flex-1 py-5 pl-1 overflow-hidden">
-                  <ul>
-                     <li class="text-xs text-gray-600 uppercase">Sender</li>
-                     <li>Rick Astley</li>
-                     <li>Rickrolled 11</li>
-                     <li>1000 Vienna</li>
-                  </ul>
-               </div>
-               <div class="flex-none pt-2.5 pr-2.5 pl-1">
-                  <button type="button" class="px-2 py-2 font-medium tracking-wide text-black capitalize transition duration-300 ease-in-out transform rounded-xl hover:bg-gray-300 focus:outline-none active:scale-95">
-                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
-                        <path d="M0 0h24v24H0V0z" fill="none"></path>
-                        <path d="M5 18.08V19h.92l9.06-9.06-.92-.92z" opacity=".3"></path>
-                        <path d="M20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29s-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83zM3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM5.92 19H5v-.92l9.06-9.06.92.92L5.92 19z"></path>
-                     </svg>
-                  </button>
-               </div>
-            </div>
-         </div>
+        
       </div>
-   </div>
+
+
+
+   <div class="container mx-auto p-10 max-w-screen-lg">
+    <div class="flex justify-between mt-8 flex-wrap lg:justify-center">
+      <div class="bg-white rounded shadow p-2 w-full lg:w-2/4">
+        <div class="w-full  px-8 py-6">
+          <h3 class="text-2xl mt-4 font-bold">Summary</h3>
+          <div class="flex justify-between mt-3">
+            <div class="text-xl text-gray-900 font-bold">Total</div>
+            <div class='text-xl text-right font-bold '>$102</div>
+          </div>
+          <div class="flex justify-between mt-3">
+            <div class="text-xl text-gray-900 font-bold">VAT (15%)</div>
+            <div class='text-xl text-right font-bold'>$12</div>
+          </div>
+          <div class="bg-gray-300 h-1 w-full mt-3"></div>
+          <div class="flex justify-between mt-3">
+            <div class="text-xl text-gray-900 font-bold">Total Amount</div>
+            <div class="text-2xl text-gray-900 font-bold">$114</div>
+          </div>
+          <button class="px-4 py-4 bg-blue-500 text-white w-full mt-3 rounded shadow font-bold hover:bg-purple- 900"> CHECKOUT</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
