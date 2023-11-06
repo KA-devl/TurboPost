@@ -1,13 +1,17 @@
 <template>
- <router-view />
-</template>
-
-<script >
-
-
-
-</script>
-
-<style>
-
-</style>
+    <router-view />
+  </template>
+  
+  <script>
+  
+  
+  export default {
+    name: 'App',
+  
+    setup(){
+  
+  
+      return {};
+    }
+  }
+  </script>
