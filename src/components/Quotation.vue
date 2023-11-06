@@ -1,12 +1,18 @@
 <template>
 
 
+<div class="mt-12 md:pl-16 md:pr-16 lg:pl-16 lg:pr-16 pr-3 pl-3 ">
+   <h2 class="text-4xl font-extrabold dark:text-white">Ship Online</h2>
+<p class="my-4 text-lg text-gray-500">To create your label, fill out the fields below. All fields are mandatory unless otherwise indicated</p>
+</div>
 
 
-<div class="flex h-screen ml-16 mt-8">
 
+
+<div class="md:flex lg:flex h-screen lg:ml-16 md:ml-16">
+   
       <div class="w-full">
-         <div class="mt-5 bg-white w-full rounded-lg shadow">
+         <div class="mt-5 bg-white w-full rounded-lg shadow-lg">
             <div class="flex">
                <div class="flex-1 py-5 pl-5 overflow-hidden">
                   <svg class="inline align-text-top" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" fill="#000000">
@@ -22,7 +28,7 @@
             <div class="px-5 pb-5">
                <input  placeholder="Name" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"><input  placeholder="Address" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"> 
                <div class="flex">
-                  <div class="flex-grow w-1/4 pr-2"><input  placeholder="PLZ" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
+            
                   <div class="flex-grow"><input placeholder="City" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
                </div>
                <div class="flex items-center pt-3"><input type="checkbox" class="w-4 h-4 text-black bg-blue-500 border-none rounded-md focus:ring-transparent"><label for="safeAdress" class="block ml-2 text-sm text-gray-900">Save as default address</label></div>
@@ -43,31 +49,40 @@
             <div class="px-5 pb-5">
                <input  placeholder="Name" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"><input  placeholder="Address" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"> 
                <div class="flex">
-                  <div class="flex-grow w-1/4 pr-2"><input  placeholder="PLZ" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
+                  
                   <div class="flex-grow"><input placeholder="City" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
                </div>
                
             </div>
+
+            <!-- package size -->
+
+            <div class="flex">
+               <div class="flex-1 py-5 pl-5 overflow-hidden">
+      
+                  <h1 class="inline text-2xl font-semibold leading-none">Package sizing</h1>
+               </div>
+               <div class="flex-none pt-2.5 pr-2.5 pl-1"></div>
+            </div>
+            <div class="px-5 pb-5">
+               <div class="flex">
+                  
+                  <div class="flex-grow w-1/4 pr-2"><input  placeholder="Height (cm)" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
+                  <div class="flex-grow"><input placeholder="Width (cm)" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
+               </div>
+               <div class="flex">
+                  
+                  <div class="flex-grow w-1/4 pr-2"><input  placeholder="Length (cm)" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
+                  <div class="flex-grow"><input placeholder="Weight (lb)" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
+               </div>
+               
+            </div>
+            
             <hr class="mt-4">
             <div class="flex flex-row-reverse p-3">
                <div class="flex-initial pl-3">
                   <button type="button" class="flex items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize   bg-blue-500 rounded-md hover:bg-gray-800  focus:outline-none focus:bg-gray-900  transition duration-300 transform active:scale-95 ease-in-out">
-                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF">
-                        <path d="M0 0h24v24H0V0z" fill="none"></path>
-                        <path d="M5 5v14h14V7.83L16.17 5H5zm7 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-8H6V6h9v4z" opacity=".3"></path>
-                        <path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm2 16H5V5h11.17L19 7.83V19zm-7-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zM6 6h9v4H6z"></path>
-                     </svg>
-                     <span class="pl-2 mx-1">Save</span>
-                  </button>
-               </div>
-               <div class="flex-initial">
-                  <button type="button" class="flex items-center px-5 py-2.5 font-medium tracking-wide text-black capitalize rounded-md  hover:bg-red-200 hover:fill-current hover:text-red-600  focus:outline-none  transition duration-300 transform active:scale-95 ease-in-out">
-                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
-                        <path d="M0 0h24v24H0V0z" fill="none"></path>
-                        <path d="M8 9h8v10H8z" opacity=".3"></path>
-                        <path d="M15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9z"></path>
-                     </svg>
-                     <span class="pl-2 mx-1">Delete</span>
+                     <span class="pl-2 mx-1">Send Package</span>
                   </button>
                </div>
             </div>
@@ -79,7 +94,7 @@
 
    <div class="container mx-auto p-10 max-w-screen-lg">
     <div class="flex justify-between mt-8 flex-wrap lg:justify-center">
-      <div class="bg-white rounded shadow p-2 w-full lg:w-2/4">
+      <div class="bg-white rounded shadow-lg p-2 w-full lg:w-2/4">
         <div class="w-full  px-8 py-6">
           <h3 class="text-2xl mt-4 font-bold">Summary</h3>
           <div class="flex justify-between mt-3">
@@ -92,15 +107,27 @@
           </div>
           <div class="bg-gray-300 h-1 w-full mt-3"></div>
           <div class="flex justify-between mt-3">
-            <div class="text-xl text-gray-900 font-bold">Total Amount</div>
+            <div class="text-xl text-gray-900 font-bold">Total Estimation</div>
             <div class="text-2xl text-gray-900 font-bold">$114</div>
           </div>
-          <button class="px-4 py-4 bg-blue-500 text-white w-full mt-3 rounded shadow font-bold hover:bg-purple- 900"> CHECKOUT</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
