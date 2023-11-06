@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import Dashboard from "../views/Dashboard.vue";
-//import Register from "../views/Register.vue";
-import { supabase } from '../supabase/init';
+import CreatePackage from "../views/CreatePackage.vue";
+import { supabase } from "../supabase/init";
+import TrackPackage from "../views/TrackPackage.vue";
 
 const routes = [
   {
@@ -33,15 +34,25 @@ const routes = [
       auth: false
     }
   },
-  // {
-  //   path: "/register",
-  //   name: "Register",
-  //   component: Register,
-  //   meta: {
-  //     title: "Register",
-  //     auth: false
-  //   }
-  // }
+  {
+    path: "/create-package",
+    name: "CreatePackage",
+    component: CreatePackage,
+    meta: {
+      title: "Create a new package",
+      auth: false
+    }
+  },
+  {
+    path: "/track-package",
+    name: "TrackPackage",
+    component: TrackPackage,
+    meta: {
+      title: "Track package",
+      auth: false
+    }
+  }
+
 
 ];
 
