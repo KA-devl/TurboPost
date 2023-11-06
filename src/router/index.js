@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import Dashboard from "../views/Dashboard.vue";
 import CreatePackage from "../views/CreatePackage.vue";
@@ -7,6 +6,7 @@ import { supabase } from "../supabase/init";
 import TrackPackage from "../views/TrackPackage.vue";
 import ContactUs from "../views/ContactUs.vue";
 import EstimatePackage from "../views/EstimatePackage.vue";
+import Home from "../views/Home.vue";
 
 const routes = [
   {
