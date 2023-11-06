@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import Dashboard from "../views/Dashboard.vue";
-import Register from "../views/Register.vue";
+//import Register from "../views/Register.vue";
 import { supabase } from '../supabase/init';
 
 const routes = [
@@ -33,15 +33,15 @@ const routes = [
       auth: false
     }
   },
-  {
-    path: "/register",
-    name: "Register",
-    component: Register,
-    meta: {
-      title: "Register",
-      auth: false
-    }
-  }
+  // {
+  //   path: "/register",
+  //   name: "Register",
+  //   component: Register,
+  //   meta: {
+  //     title: "Register",
+  //     auth: false
+  //   }
+  // }
 
 ];
 
