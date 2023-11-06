@@ -12,7 +12,7 @@
           <!-- <p tabindex="0" class="focus:outline-none text-sm mt-4 font-medium leading-none text-gray-500">
             Not a member yet?
             <router-link
-              class="hover:text-gray-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none  text-indigo-500 cursor-pointer"
+              class="hover:text-gray-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none  text-blue-500 cursor-pointer"
               :to="{ name: 'Register' }">Signup here</router-link>
           </p> -->
   
@@ -42,12 +42,12 @@
   
           <!-- <p class="mt-2 text-center">
             <router-link
-              class="hover:text-indigo-500 focus:text-indigo-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none  text-gray-500 cursor-pointer"
+              class="hover:text-blue-500 focus:text-blue-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none  text-gray-500 cursor-pointer"
               :to="{ name: 'ForgotPassword' }">Forgot password?</router-link>
           </p> -->
           <div class="mt-8">
             <button type="submit"
-              class="focus:ring-2 focus:ring-offset-2 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-500 border rounded-lg hover:bg-indigo-700 py-4 w-full">
+              class="focus:ring-2 focus:ring-offset-2 text-sm font-semibold leading-none text-white focus:outline-none bg-blue-500 border rounded-lg hover:bg-blue-700 py-4 w-full">
               LOG IN
             </button>
           </div>
