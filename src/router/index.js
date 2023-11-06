@@ -5,6 +5,7 @@ import Dashboard from "../views/Dashboard.vue";
 import CreatePackage from "../views/CreatePackage.vue";
 import { supabase } from "../supabase/init";
 import TrackPackage from "../views/TrackPackage.vue";
+import ContactUs from "../views/ContactUs.vue";
 
 const routes = [
   {
@@ -49,6 +50,15 @@ const routes = [
     component: TrackPackage,
     meta: {
       title: "Track package",
+      auth: false
+    }
+  },
+  {
+    path: "/contact",
+    name: "ContactUs",
+    component: ContactUs,
+    meta: {
+      title: "Contact Us",
       auth: false
     }
   }
