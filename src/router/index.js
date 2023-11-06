@@ -6,6 +6,7 @@ import CreatePackage from "../views/CreatePackage.vue";
 import { supabase } from "../supabase/init";
 import TrackPackage from "../views/TrackPackage.vue";
 import ContactUs from "../views/ContactUs.vue";
+import EstimatePackage from "../views/EstimatePackage.vue";
 
 const routes = [
   {
@@ -41,6 +42,15 @@ const routes = [
     component: CreatePackage,
     meta: {
       title: "Create a new package",
+      auth: false
+    }
+  },
+  {
+    path: "/estimation",
+    name: "EstimatePackage",
+    component: EstimatePackage,
+    meta: {
+      title: "Estimate a new package",
       auth: false
     }
   },
