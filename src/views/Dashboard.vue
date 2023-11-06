@@ -1,9 +1,9 @@
 
 <template>
 
-    <div class="home bg-red-100">
-        <h1>Home</h1>
-        <p>Home page content goes here.</p>
+    <div class=" bg-red-100">
+        <h1>Dashboard</h1>
+        <p>HDashboarddd</p>
     </div>
 
   
