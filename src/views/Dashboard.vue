@@ -1,10 +1,8 @@
 
 <template>
 <Navbar/>
-    <div class=" bg-red-100">
-        <h1>Dashboard</h1>
-        <p>HDashboarddd</p>
-    </div>
+  
+<DeliveryTable/>
 
   
 
@@ -14,10 +12,11 @@
 
 <script>
 import Navbar from '../components/Navbar.vue';
+import DeliveryTable from '../components/DeliveryTable.vue';
 
 
 export default {
-    components: {Navbar},
+    components: {Navbar, DeliveryTable},
     setup(){
         return {};
     }
