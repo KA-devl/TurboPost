@@ -73,7 +73,7 @@ const router = createRouter({
 
 //Naming the pages properly
 router.beforeEach((to, from, next) => {
-  document.title = `${to.meta.title} | Active+`;
+  document.title = `${to.meta.title} | TurboPost`;
   next()
 })
 
