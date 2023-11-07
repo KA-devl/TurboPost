@@ -6,18 +6,18 @@ import { supabase } from "../supabase/init";
 import TrackPackage from "../views/TrackPackage.vue";
 import ContactUs from "../views/ContactUs.vue";
 import EstimatePackage from "../views/EstimatePackage.vue";
-import Home from "../views/Home.vue";
+// import Home from "../views/Home.vue";
 
 const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home,
-    meta: {
-      title: "Home",
-      auth: false
-    }
-  },
+  // {
+  //   path: "/",
+  //   name: "Home",
+  //   component: Home,
+  //   meta: {
+  //     title: "Home",
+  //     auth: false
+  //   }
+  // },
   {
     path: "/dashboard",
     name: "Dashboard",

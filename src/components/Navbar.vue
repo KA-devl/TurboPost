@@ -16,7 +16,7 @@
       </div>
       <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
         <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:pl-7">
-            <router-link :to="{ name: 'Home' }"><span class="font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-gray-400 dark:hover:text-gray-500">Home</span></router-link>
+            <!-- <router-link :to="{ name: 'Home' }"><span class="font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-gray-400 dark:hover:text-gray-500">Home</span></router-link> -->
             <router-link v-if="!user" :to="{ name: 'EstimatePackage' }"><span class="font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-gray-400 dark:hover:text-gray-500">Estimate Package</span></router-link>
             <router-link v-if="user" :to="{ name: 'Dashboard' }"><span class="font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-gray-400 dark:hover:text-gray-500">Dashboard</span></router-link>
             <router-link v-if="!user" :to="{ name: 'ContactUs' }"><span class="font-medium text-gray-500 hover:text-gray-400 md:py-6 dark:text-gray-400 dark:hover:text-gray-500">Contact Us</span></router-link>
