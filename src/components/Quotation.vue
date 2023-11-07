@@ -530,9 +530,6 @@ export default {
         try {
           const res = await supabase.from("package").insert({
             amount : totalAfterTax.value,
-            status : {
-              status : "pending"
-            },
             tracking_id : generateTrackingId()
           });
 
