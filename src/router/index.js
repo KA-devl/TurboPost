@@ -6,7 +6,7 @@ import { supabase } from "../supabase/init";
 import TrackPackage from "../views/TrackPackage.vue";
 import ContactUs from "../views/ContactUs.vue";
 import EstimatePackage from "../views/EstimatePackage.vue";
-import Home from "../views/Home";
+import Home from "../views/Home.vue";
 
 const routes = [
   {
