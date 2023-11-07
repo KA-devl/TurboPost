@@ -7,8 +7,18 @@ import TrackPackage from "../views/TrackPackage.vue";
 import ContactUs from "../views/ContactUs.vue";
 import EstimatePackage from "../views/EstimatePackage.vue";
 import HomePage from "../views/HomePage.vue";
+import PageNotFound from "../views/PageNotFound.vue";
 
 const routes = [
+  {
+    path: "/:pathMatch(.*)*",
+    name: "not-found",
+    component: PageNotFound,
+    meta: {
+      title: "Page not foud",
+      auth: false
+    }
+  },
   {
     path: "/",
     name: "HomePage",
