@@ -6,19 +6,19 @@
       <div class="-m-1.5 overflow-x-auto">
         <div class="p-1.5 min-w-full inline-block align-middle">
           <div
-            class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden dark:bg-slate-900 dark:border-gray-700"
+            class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden "
           >
             <!-- Header -->
             <div
-              class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-gray-700"
+              class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 "
             >
               <div>
                 <h2
-                  class="text-xl font-semibold text-gray-800 dark:text-gray-200"
+                  class="text-xl font-semibold text-gray-800 "
                 >
                   Current deliveries
                 </h2>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
+                <p class="text-sm text-gray-600 ">
                   Deliveries that are currently pending or delivered
                 </p>
               </div>
@@ -36,7 +36,7 @@
                   <th scope="col" class="px-6 py-4 text-left">
                     <div class="flex items-center gap-x-2">
                       <span
-                        class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200"
+                        class="text-xs font-semibold uppercase tracking-wide text-gray-800 "
                       >
                         Tracking ID
                       </span>
@@ -46,7 +46,7 @@
                   <th scope="col" class="px-6 py-3 text-left">
                     <div class="flex items-center gap-x-2">
                       <span
-                        class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200"
+                        class="text-xs font-semibold uppercase tracking-wide text-gray-800 0"
                       >
                         Amount
                       </span>
@@ -56,7 +56,7 @@
                   <th scope="col" class="px-6 py-3 text-left">
                     <div class="flex items-center gap-x-2">
                       <span
-                        class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200"
+                        class="text-xs font-semibold uppercase tracking-wide text-gray-800 "
                       >
                         Status
                       </span>
@@ -66,7 +66,7 @@
                   <th scope="col" class="px-6 py-3 text-left">
                     <div class="flex items-center gap-x-2">
                       <span
-                        class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200"
+                        class="text-xs font-semibold uppercase tracking-wide text-gray-800 "
                       >
                         Due
                       </span>
@@ -76,7 +76,7 @@
                   <th scope="col" class="px-6 py-3 text-left">
                     <div class="flex items-center gap-x-2">
                       <span
-                        class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200"
+                        class="text-xs font-semibold uppercase tracking-wide text-gray-800 "
                       >
                         Created
                       </span>
@@ -100,7 +100,7 @@
                     >
                       <div class="px-6 py-2">
                         <span
-                          class="font-mono text-sm text-blue-600 dark:text-blue-500"
+                          class="font-mono text-sm text-blue-600 "
                           ># {{ data.tracking_id }}</span
                         >
                       </div>
@@ -113,7 +113,7 @@
                       data-hs-overlay="#hs-ai-invoice-modal"
                     >
                       <div class="px-6 py-2">
-                        <span class="text-sm text-gray-600 dark:text-gray-400"
+                        <span class="text-sm text-gray-600 "
                           >${{ data.amount }}0</span
                         >
                       </div>
@@ -128,7 +128,7 @@
                     >
                       <div class="px-6 py-2">
                         <span
-                          class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+                          class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-green-100 text-green-800 "
                         >
                           <svg
                             class="w-2.5 h-2.5"
@@ -154,7 +154,7 @@
                     >
                       <div class="px-6 py-2">
                         <span
-                          class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-red-900 dark:text-green-200"
+                          class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 "
                         >
                           <svg
                             class="w-2.5 h-2.5"
@@ -180,7 +180,7 @@
                     >
                       <div class="px-6 py-2">
                         <span
-                          class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-green-200"
+                          class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-red-100 text-red-800 "
                         >
                           <svg
                             class="w-2.5 h-2.5"
@@ -207,7 +207,7 @@
                     >
                       <div class="px-6 py-2">
                         <span
-                          class="text-sm text-gray-600 dark:text-gray-400"
+                          class="text-sm text-gray-600 "
                           >{{ formatDueDate(data.created_at) }}</span
                         >
                       </div>
@@ -221,7 +221,7 @@
                     >
                       <div class="px-6 py-2">
                         <span
-                          class="text-sm text-gray-600 dark:text-gray-400"
+                          class="text-sm text-gray-600 "
                           >{{ formatDate(data.created_at) }}</span
                         >
                       </div>
@@ -238,7 +238,7 @@
                         class="py-1.5"
                       >
                         <div
-                          class="py-1 px-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white"
+                          class="py-1 px-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 text-sm  "
                         >
                           Acquire package
                         </div>
@@ -253,7 +253,7 @@
                     >
                       <div class=" py-1.5">
                         <div
-                          class="py-1 px-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white"
+                          class="py-1 px-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 text-sm "
                         >
                           Confirm delivery
                         </div>
@@ -267,12 +267,12 @@
 
             <!-- Footer -->
             <div
-              class="px-6 py-5 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200 dark:border-gray-700"
+              class="px-6 py-5 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200 "
             >
               <div>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
+                <p class="text-sm text-gray-600 ">
                   <span
-                    class="font-semibold text-gray-800 dark:text-gray-200"
+                    class="font-semibold text-gray-800 "
                     >{{ count }}</span
                   >
                   results
