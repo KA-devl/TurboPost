@@ -245,7 +245,8 @@
                       </div>
                     </a>
                     <a
-                      v-if="data.status == 'transit'"
+                      @click="confirmDelivery(data.id, data.status)"
+                      v-if="data.status == 'transit' && data.employee_id == user.id"
                       class="block"
                       href="javascript:;"
                       data-hs-overlay="#hs-ai-invoice-modal"
@@ -370,7 +371,7 @@ export default {
       if ((status == "delivered" || status == "transit") && employeeId ) {
         toast.error("Package already acquired");
         return;
-      } else if ((status == "pending") && !employeeId) {
+      } else if ((status == "pending") ) {
         try {
           const res = await supabase
             .from("package")
@@ -389,6 +390,28 @@ export default {
       }
     };
 
+    const confirmDelivery = async(id, status) =>{
+      if(status == "delivered"){
+        toast.error("Package already delivered");
+        return;
+      }else if(status == "transit"){
+        try {
+          const res = await supabase
+            .from("package")
+            .update({ status: "delivered" })
+            .eq("id", id);
+            console.log(res);
+          if (res.error) throw new Error(res.error.message);
+          
+          toast.success("Package delivered successfully");
+        } catch (error) {
+          toast.error(error.message);
+          throw new Error(
+            `Failed to deliver package due to error : ${error.message}`
+          );
+        }
+      }
+    }
     onMounted(async () => {
       try {
         const res = await supabase.from("package").select("*");
@@ -403,7 +426,7 @@ export default {
       }
     });
 
-    return { packageData, formatDate, formatDueDate, count, acquirePackage, user };
+    return { packageData, formatDate, formatDueDate, count, acquirePackage, user, confirmDelivery };
   },
 };
 </script>
