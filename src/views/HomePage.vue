@@ -323,6 +323,8 @@ import Footer from "../components/Footer.vue";
 import PackageAnimation from "../components/PackageAnimation.vue";
 import { ref } from "vue";
 import { useToast } from "vue-toastification";
+import { useRouter } from "vue-router";
+import { supabase } from "../supabase/init";
 
 export default {
   components: { Navbar, Footer, PackageAnimation },
@@ -330,6 +332,7 @@ export default {
     const userInput = ref("");
     const isPackageAnimation = ref(false);
     const toast = useToast();
+    const router = useRouter();
 
     const validateInput = () =>{
       if (userInput.value.length < 5) {
@@ -340,13 +343,32 @@ export default {
       }
     }
 
-    const handleInput = () => {
+    const handleInput = async () => {
       //perform a timeOut of 2 sec and then set back animation to false
      if(validateInput()){
       isPackageAnimation.value = true;
       setTimeout(() => {
         isPackageAnimation.value = false;
       }, 3800);
+      try {
+        console.log(userInput.value)
+        const res = await supabase
+          .from("package")
+          .select("*")
+          .eq("tracking_id", userInput.value);
+          console.log(res.data)
+        if(res.data.length > 0){
+          router.push({ name: "TrackPackage", params: { id: userInput.value } });
+        } else {
+          // display invalid tracking id after 3 sec
+          setTimeout(() => {
+            toast.error("Invalid tracking id");
+          }, 3000);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    
      }
     };
     return { userInput, handleInput, isPackageAnimation };

@@ -65,7 +65,7 @@ const routes = [
     }
   },
   {
-    path: "/track-package",
+    path: "/track-package/:id",
     name: "TrackPackage",
     component: TrackPackage,
     meta: {
