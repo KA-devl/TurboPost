@@ -31,7 +31,6 @@
             
                   <div class="flex-grow"><input placeholder="City" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
                </div>
-               <div class="flex items-center pt-3"><input type="checkbox" class="w-4 h-4 text-black bg-blue-500 border-none rounded-md focus:ring-transparent"><label for="safeAdress" class="block ml-2 text-sm text-gray-900">Save as default address</label></div>
             </div>
             <div class="flex">
                <div class="flex-1 py-5 pl-5 overflow-hidden">
@@ -67,13 +66,13 @@
             <div class="px-5 pb-5">
                <div class="flex">
                   
-                  <div class="flex-grow w-1/4 pr-2"><input  placeholder="Height (cm)" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
-                  <div class="flex-grow"><input placeholder="Width (cm)" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
+                  <div class="flex-grow w-1/4 pr-2"><input v-model="height"  placeholder="Height (cm)" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
+                  <div class="flex-grow"><input v-model="width" placeholder="Width (cm)" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
                </div>
                <div class="flex">
                   
-                  <div class="flex-grow w-1/4 pr-2"><input  placeholder="Length (cm)" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
-                  <div class="flex-grow"><input placeholder="Weight (lb)" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
+                  <div class="flex-grow w-1/4 pr-2"><input v-model="length"  placeholder="Length (cm)" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
+                  <div class="flex-grow"><input v-model="weight" placeholder="Weight (lb)" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"></div>
                </div>
                
             </div>
@@ -99,16 +98,16 @@
           <h3 class="text-2xl mt-4 font-bold">Summary</h3>
           <div class="flex justify-between mt-3">
             <div class="text-xl text-gray-900 font-bold">Total</div>
-            <div class='text-xl text-right font-bold '>$102</div>
+            <div class='text-xl text-right font-bold '>${{ totalBeforeTax }}</div>
           </div>
           <div class="flex justify-between mt-3">
             <div class="text-xl text-gray-900 font-bold">VAT (15%)</div>
-            <div class='text-xl text-right font-bold'>$12</div>
+            <div class='text-xl text-right font-bold'>${{ taxAmount }}</div>
           </div>
           <div class="bg-gray-300 h-1 w-full mt-3"></div>
           <div class="flex justify-between mt-3">
             <div class="text-xl text-gray-900 font-bold">Total Estimation</div>
-            <div class="text-2xl text-gray-900 font-bold">$114</div>
+            <div class="text-2xl text-gray-900 font-bold">${{ totalAfterTax }}</div>
           </div>
         </div>
       </div>
@@ -134,16 +133,28 @@
 </template>
 
 <script>
+import { ref, computed } from 'vue';
 
 export default {
-    setup() {
+  setup() {
+    const height = ref(0);
+    const width = ref(0);
+    const length = ref(0);
+    const weight = ref(0);
 
-        return {}
+    const totalBeforeTax = computed(() => {
+      return height.value * width.value * length.value * weight.value;
+    });
 
-    }
-}
+    const taxAmount = computed(() => {
+      return totalBeforeTax.value * 0.15;
+    });
 
+    const totalAfterTax = computed(() => {
+      return totalBeforeTax.value + taxAmount.value;
+    });
 
-
-
+    return { totalBeforeTax, taxAmount, totalAfterTax, height, width, length, weight };
+  },
+};
 </script>
