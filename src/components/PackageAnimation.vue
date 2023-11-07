@@ -19,7 +19,7 @@
                 <div class="light-front"></div>
                 <div class="antenna"></div>
                 <div class="ice-cream">
-                  <p>Package sent! Thank you</p>
+                  <p></p>
                 </div>
               </div>
               <div>
