@@ -5,7 +5,7 @@
   <figure>
     <img src="../assets/package.png"  alt="">
     <figcaption>
-      <h4>Package</h4>
+      <h4>Expected delivery : 21st november, 2019 + 3 days</h4>
       <h6>Tracking ID : 138947213</h6>
       <h2>$23.40</h2>
     </figcaption>

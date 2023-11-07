@@ -477,6 +477,7 @@
 <script>
 import { ref, computed } from "vue";
 import { useToast } from "vue-toastification";
+import { supabase } from "../supabase/init";
 
 export default {
   setup() {
@@ -519,14 +520,37 @@ export default {
         return false;
       }  
    };
+   const generateTrackingId = () => {
+      return Math.floor(Math.random() * 10000000);
+    };
 
-   const placeOrder = () => {
+   const placeOrder = async () => {
       if (verifyPaymentFields()) {
-        isPayment.value = false;
+
+        try {
+          const res = await supabase.from("package").insert({
+            amount : totalAfterTax.value,
+            status : {
+              status : "pending"
+            },
+            tracking_id : generateTrackingId()
+          });
+
+          if(res.error) {
+            throw res.error;
+          }
+          isPayment.value = false;
         isConfirmation.value = true;
         toast.success("Order placed successfully", {
           timeout: 4000,
         });
+        }
+        catch (error) {
+          toast.error(error.message, {
+            timeout: 4000,
+          });
+        }
+        
       } else {
         toast.error("Please fill all the fields", {
           timeout: 4000,
