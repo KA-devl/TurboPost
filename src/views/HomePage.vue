@@ -8,13 +8,11 @@
     <div class="relative overflow-hidden">
       <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-24">
         <div class="text-center">
-          <h1
-            class="text-4xl sm:text-6xl font-bold text-gray-800 "
-          >
+          <h1 class="text-4xl sm:text-6xl font-bold text-gray-800">
             Track your delivery
           </h1>
 
-          <p class="mt-3 text-gray-600 ">
+          <p class="mt-3 text-gray-600">
             You have sent or expect to receive a package? You can always track
             it here.
           </p>
@@ -23,12 +21,12 @@
             <!-- Form -->
 
             <div
-              class="relative z-10 flex space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100 "
+              class="relative z-10 flex space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100"
             >
               <div class="flex-[1_0_0%]">
                 <label
                   for="hs-search-article-1"
-                  class="block text-sm text-gray-700 font-medium "
+                  class="block text-sm text-gray-700 font-medium"
                   ><span class="sr-only">Search article</span></label
                 >
                 <input
@@ -36,13 +34,13 @@
                   type="email"
                   name="hs-search-article-1"
                   id="hs-search-article-1"
-                  class="p-3 block w-full border-transparent rounded-md focus:border-blue-500 focus:ring-blue-500 "
+                  class="p-3 block w-full border-transparent rounded-md focus:border-blue-500 focus:ring-blue-500"
                   placeholder="Enter your tracking delivery here"
                 />
               </div>
               <div @click="handleInput" class="flex-[0_0_auto]">
                 <a
-                  class="p-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm "
+                  class="p-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm"
                   href="#"
                 >
                   <svg
@@ -131,9 +129,7 @@
           class="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center"
         >
           <div class="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
-            <h2
-              class="text-2xl text-gray-800 font-bold sm:text-3xl "
-            >
+            <h2 class="text-2xl text-gray-800 font-bold sm:text-3xl">
               Receiving & sending a package have never been so easy
             </h2>
 
@@ -145,7 +141,7 @@
             >
               <button
                 type="button"
-                class="hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-left hover:bg-gray-200 p-4 md:p-5 rounded-xl   active"
+                class="hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent text-left hover:bg-gray-200 p-4 md:p-5 rounded-xl active"
                 id="tabs-with-card-item-1"
                 data-hs-tab="#tabs-with-card-1"
                 aria-controls="tabs-with-card-1"
@@ -154,11 +150,10 @@
                 <span class="flex">
                   <span class="grow ml-6">
                     <span
-                      class="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 "
+                      class="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800"
                       >Receiving</span
                     >
-                    <span
-                      class="block mt-1 text-gray-800  "
+                    <span class="block mt-1 text-gray-800"
                       >You’ve got mail; we can help you manage it! Forward bills
                       and statements to a new address or sign up to get them
                       online.</span
@@ -178,11 +173,10 @@
                 <span class="flex">
                   <span class="grow ml-6">
                     <span
-                      class="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800  "
+                      class="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800"
                       >Sending</span
                     >
-                    <span
-                      class="block mt-1 text-gray-800 "
+                    <span class="block mt-1 text-gray-800"
                       >Need to send a greeting card or ship a parcel? We can
                       help you look up postal codes, find out how much postage
                       you need or show you how to ship online.</span
@@ -202,11 +196,10 @@
                 <span class="flex">
                   <span class="grow ml-6">
                     <span
-                      class="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 "
+                      class="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800"
                       >Money services</span
                     >
-                    <span
-                      class="block mt-1 text-gray-800  "
+                    <span class="block mt-1 text-gray-800"
                       >From sending money to loved ones to buying prepaid credit
                       and gift cards, we offer a range of secure and convenient
                       money services.</span
@@ -229,7 +222,7 @@
                   aria-labelledby="tabs-with-card-item-1"
                 >
                   <img
-                    class="shadow-xl shadow-gray-200 rounded-xl "
+                    class="shadow-xl shadow-gray-200 rounded-xl"
                     src="https://www.workbc.ca/sites/default/files/styles/hero_image/public/NTI5NzE_1NLjKRayI9KTsIw6-1513-NOC.jpg?itok=r1ukcDy8"
                     alt="Image Description"
                   />
@@ -242,7 +235,7 @@
                   aria-labelledby="tabs-with-card-item-2"
                 >
                   <img
-                    class="shadow-xl shadow-gray-200 rounded-xl "
+                    class="shadow-xl shadow-gray-200 rounded-xl"
                     src="https://images.unsplash.com/photo-1665686306574-1ace09918530?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
                     alt="Image Description"
                   />
@@ -255,7 +248,7 @@
                   aria-labelledby="tabs-with-card-item-3"
                 >
                   <img
-                    class="shadow-xl shadow-gray-200 rounded-xl "
+                    class="shadow-xl shadow-gray-200 rounded-xl"
                     src="https://images.unsplash.com/photo-1598929213452-52d72f63e307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80"
                     alt="Image Description"
                   />
@@ -305,7 +298,7 @@
         <!-- Background Color -->
         <div class="absolute inset-0 grid grid-cols-12 w-full h-full">
           <div
-            class="col-span-full lg:col-span-7 lg:col-start-6 bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full "
+            class="col-span-full lg:col-span-7 lg:col-start-6 bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full"
           ></div>
         </div>
         <!-- End Background Color -->
@@ -334,42 +327,42 @@ export default {
     const toast = useToast();
     const router = useRouter();
 
-    const validateInput = () =>{
+    const validateInput = () => {
       if (userInput.value.length < 5) {
         toast.error("Please enter a valid tracking number");
         return false;
       } else {
         return true;
       }
-    }
+    };
 
     const handleInput = async () => {
       //perform a timeOut of 2 sec and then set back animation to false
-     if(validateInput()){
-      isPackageAnimation.value = true;
-      setTimeout(() => {
-        isPackageAnimation.value = false;
-      }, 3800);
-      try {
-        console.log(userInput.value)
-        const res = await supabase
-          .from("package")
-          .select("*")
-          .eq("tracking_id", userInput.value);
-          console.log(res.data)
-        if(res.data.length > 0){
-          router.push({ name: "TrackPackage", params: { id: userInput.value } });
-        } else {
-          // display invalid tracking id after 3 sec
-          setTimeout(() => {
-            toast.error("Invalid tracking id");
-          }, 3000);
+      if (validateInput()) {
+        try {
+          const res = await supabase
+            .from("package")
+            .select("*")
+            .eq("tracking_id", userInput.value);
+          console.log(res.data);
+          if (res.data.length > 0) {
+            isPackageAnimation.value = true;
+            setTimeout(() => {
+              isPackageAnimation.value = false;
+            }, 3800);
+            setTimeout(() => {
+              router.push({
+              name: "TrackPackage",
+              params: { id: userInput.value },
+            });
+            }, 4000);
+          } else {
+              toast.error("Invalid tracking id");
+          }
+        } catch (error) {
+          console.log(error);
         }
-      } catch (error) {
-        console.log(error);
       }
-    
-     }
     };
     return { userInput, handleInput, isPackageAnimation };
   },
