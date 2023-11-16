@@ -1,4 +1,5 @@
 <template>
+  <ChatWidget />
   <div v-if="isPackageAnimation">
     <PackageAnimation />
   </div>
@@ -318,9 +319,10 @@ import { ref } from "vue";
 import { useToast } from "vue-toastification";
 import { useRouter } from "vue-router";
 import { supabase } from "../supabase/init";
+import ChatWidget from "../components/ChatWidget.vue";
 
 export default {
-  components: { Navbar, Footer, PackageAnimation },
+  components: { Navbar, Footer, PackageAnimation, ChatWidget },
   setup() {
     const userInput = ref("");
     const isPackageAnimation = ref(false);
