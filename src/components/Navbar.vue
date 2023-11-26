@@ -20,7 +20,7 @@
             <router-link v-if="!user" :to="{ name: 'EstimatePackage' }"><span class="font-medium text-gray-500 hover:text-gray-400 md:py-6 ">Estimate Package</span></router-link>
             <router-link v-if="user" :to="{ name: 'Dashboard' }"><span class="font-medium text-gray-500 hover:text-gray-400 md:py-6 ">Dashboard</span></router-link>
             <router-link v-if="!user" :to="{ name: 'ContactUs' }"><span class="font-medium text-gray-500 hover:text-gray-400 md:py-6 ">Contact Us</span></router-link>
-          <a v-if="!user" class="font-medium text-gray-500 hover:text-gray-400 md:py-6" href="#">FAQ</a>
+            <router-link v-if="!user" :to="{ name: 'FAQ' }"><span class="font-medium text-gray-500 hover:text-gray-400 md:py-6 ">FAQ</span></router-link>
           <a v-if="!user" class="font-medium text-gray-500 hover:text-gray-400 md:py-6 " href="#">Blog</a>
   
         

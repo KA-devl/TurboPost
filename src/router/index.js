@@ -8,6 +8,7 @@ import ContactUs from "../views/ContactUs.vue";
 import EstimatePackage from "../views/EstimatePackage.vue";
 import HomePage from "../views/HomePage.vue";
 import PageNotFound from "../views/PageNotFound.vue";
+import FAQ from "../views/FAQ.vue";
 
 const routes = [
   {
@@ -35,6 +36,15 @@ const routes = [
     meta: {
       title: "Dashboard",
       auth: true
+    }
+  },
+  {
+    path: "/faq",
+    name: "FAQ",
+    component: FAQ,
+    meta: {
+      title: "FAQ",
+      auth: false
     }
   },
   {
