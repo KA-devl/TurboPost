@@ -281,13 +281,13 @@
             <div class="flex justify-between mt-3">
               <div class="text-xl text-gray-900 font-bold">Subtotal</div>
               <div v-if="totalBeforeTax" class="text-xl text-right font-bold">
-                ${{ totalBeforeTax }}0
+                ${{ totalBeforeTax.toFixed(2) }}
               </div>
             </div>
             <div class="flex justify-between mt-3">
               <div class="text-xl text-gray-900 font-bold">VAT (15%)</div>
               <div v-if="taxAmount" class="text-xl text-right font-bold">
-                ${{ taxAmount }}0
+                ${{ taxAmount.toFixed(2) }}
               </div>
             </div>
             <div class="bg-gray-300 h-1 w-full mt-3"></div>
@@ -299,7 +299,7 @@
                 v-if="totalAfterTax"
                 class="text-2xl text-gray-900 font-bold"
               >
-                ${{ totalAfterTax }}0
+                ${{ totalAfterTax.toFixed(2) }}
               </div>
             </div>
           </div>
@@ -432,17 +432,21 @@
         <div class="mt-6 border-t border-b py-2">
           <div class="flex items-center justify-between">
             <p class="text-sm font-medium text-gray-900">Subtotal</p>
-            <p class="font-semibold text-gray-900">${{ totalBeforeTax }}0</p>
+            <p class="font-semibold text-gray-900">${{ totalBeforeTax.toFixed(2) }}</p>
           </div>
           <div class="flex items-center justify-between">
             <p class="text-sm font-medium text-gray-900">VAT (15%)</p>
-            <p class="font-semibold text-gray-900">${{ taxAmount }}0</p>
+            <p class="font-semibold text-gray-900">${{ taxAmount.toFixed(2) }}</p>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-medium text-gray-900">Shipping cost</p>
+            <p class="font-semibold text-gray-900">$8.00</p>
           </div>
         </div>
         <div class="mt-6 flex items-center justify-between">
           <p class="text-sm font-medium text-gray-900">Total</p>
           <p class="text-2xl font-semibold text-gray-900">
-            ${{ totalAfterTax + 8 }}0
+            ${{ totalAfterTax.toFixed(2) + 8 }}
           </p>
         </div>
       </div>
@@ -582,7 +586,7 @@
                     Amount
                   </h5>
                   <p class="sm:text-end text-gray-800 dark:text-gray-200">
-                    ${{ totalBeforeTax }}
+                    ${{ totalBeforeTax.toFixed(2) }}
                   </p>
                 </div>
               </div>
@@ -610,7 +614,7 @@
                     Subtotal:
                   </dt>
                   <dd class="col-span-2 text-gray-500">
-                    ${{ totalBeforeTax }}0
+                    ${{ totalBeforeTax.toFixed(2) }}
                   </dd>
                 </dl>
 
@@ -621,7 +625,7 @@
                     Total:
                   </dt>
                   <dd class="col-span-2 text-gray-500">
-                    ${{ totalAfterTax }}0
+                    ${{ totalAfterTax }}
                   </dd>
                 </dl>
 
@@ -631,7 +635,7 @@
                   >
                     Tax:
                   </dt>
-                  <dd class="col-span-2 text-gray-500">${{ taxAmount }}0</dd>
+                  <dd class="col-span-2 text-gray-500">${{ taxAmount }}</dd>
                 </dl>
               </div>
               <!-- End Grid -->
@@ -849,7 +853,7 @@ export default {
     };
 
     const totalBeforeTax = computed(() => {
-      return height.value * width.value * length.value * weight.value;
+      return height.value * width.value * length.value * weight.value * 0.7;
     });
 
     const taxAmount = computed(() => {
