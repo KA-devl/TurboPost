@@ -5,6 +5,7 @@
   <!-- Title -->
   <div class="max-w-2xl mx-auto mb-10 lg:mb-14">
     <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">You might be wondering...</h2>
+    HI FROM DEMO
   </div>
   <!-- End Title -->
 
