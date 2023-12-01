@@ -853,7 +853,7 @@ export default {
     };
 
     const totalBeforeTax = computed(() => {
-      return height.value * width.value * length.value * weight.value * 0.7;
+      return (height.value * width.value * length.value * 0.05) + (weight.value * 0.15);
     });
 
     const taxAmount = computed(() => {
